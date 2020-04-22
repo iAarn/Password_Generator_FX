@@ -14,14 +14,15 @@
     <AnchorPane layoutX="4.0" layoutY="7.0" prefHeight="119.0" prefWidth="410.0">
 
         <children>
-            <TextField editable="false" focusTraversable="false" layoutX="9.0" layoutY="47.0" prefHeight="25.0" prefWidth="325.0" promptText="Your password" />
-            <Button layoutX="342.0" layoutY="47.0" mnemonicParsing="false" text="Copy" />
-            <CheckBox layoutX="9.0" layoutY="88.0" mnemonicParsing="false" text="Upper Case" />
-            <CheckBox layoutX="123.0" layoutY="88.0" mnemonicParsing="false" text="Digits" />
-            <CheckBox layoutX="222.0" layoutY="88.0" mnemonicParsing="false" text="Spec Chars" />
-            <Button defaultButton="true" layoutX="321.0" layoutY="13.0" mnemonicParsing="false" text="Generate" textAlignment="CENTER" wrapText="true" />
-            <AmbientLight color="CHARTREUSE" layoutX="386.0" layoutY="14.0" lightOn="true" />
-            <TextField layoutX="9.0" layoutY="13.0" promptText="Enter Password Length" />
+            <TextField fx:id="setTextField" onAction="#setTextFieldAction" editable="false" focusTraversable="false"
+                       layoutX="9.0" layoutY="47.0" prefHeight="25.0" prefWidth="325.0" promptText="Your password" />
+            <Button fx:id="copyButton" onAction="#copyButtonClicked" layoutX="342.0" layoutY="47.0" mnemonicParsing="false" text="Copy" />
+            <CheckBox fx:id="upperCheckbox" onAction="#upperCheckboxClicked" layoutX="9.0" layoutY="88.0" mnemonicParsing="false" text="Upper Case" />
+            <CheckBox fx:id="digitsCheckbox" onAction="#digitsCheckboxClicked" layoutX="123.0" layoutY="88.0" mnemonicParsing="false" text="Digits" />
+            <CheckBox fx:id="charsCheckbox" onAction="#charsCheckboxClicked" layoutX="222.0" layoutY="88.0" mnemonicParsing="false" text="Spec Chars" />
+            <Button fx:id="generateButton" onAction="#gButtonClicked" defaultButton="true"  focusTraversable="false"
+                    layoutX="321.0" layoutY="13.0" mnemonicParsing="false" text="Generate" textAlignment="CENTER" wrapText="true" />
+            <TextField fx:id="enterTextField" onKeyPressed="#enterTextFieldAction" layoutX="9.0" layoutY="13.0" promptText="Enter Password Length" />
         </children>
     </AnchorPane>
 </children>
