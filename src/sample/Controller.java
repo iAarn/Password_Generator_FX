@@ -28,15 +28,20 @@ public class Controller {
             setTextField.setText(AlgorithmHash.Algorithm(Integer.parseInt(enterTextField.getText()), upperCheckbox.isSelected(),
                     digitsCheckbox.isSelected(), charsCheckbox.isSelected()));  }
     }
+
     public void copyButtonClicked(ActionEvent actionEvent) {
         String ctc = setTextField.getText();
         StringSelection stringSelection = new StringSelection(ctc);
         Clipboard clpbrd = Toolkit.getDefaultToolkit().getSystemClipboard();
         clpbrd.setContents(stringSelection, null);
     }
+
     public void upperCheckboxClicked(ActionEvent actionEvent) {    }
+
     public void digitsCheckboxClicked(ActionEvent actionEvent) {    }
+
     public void charsCheckboxClicked(ActionEvent actionEvent) {    }
+
     public void enterTextFieldAction(javafx.scene.input.KeyEvent actionEvent) {
         if(actionEvent.getEventType().equals(KeyEvent.VK_ENTER)) {
             if (AlgorithmHash.CharsValidator(enterTextField.getText())) {
@@ -44,6 +49,7 @@ public class Controller {
                         digitsCheckbox.isSelected(), charsCheckbox.isSelected()));   }
         }
             }
+
     public void setTextFieldAction(ActionEvent actionEvent) {
 
         setTextField.setText(AlgorithmHash.Algorithm(Integer.parseInt(enterTextField.getText()), upperCheckbox.isSelected(),
