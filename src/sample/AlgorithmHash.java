@@ -24,10 +24,10 @@ public class AlgorithmHash {
 
         if (text.isEmpty()) {
             JOptionPane.showMessageDialog(null, "Error! Text box is empty! Please, try to enter a number");
-        }
+        }else
         if (!isInteger(text)) {
             JOptionPane.showMessageDialog(null, "Error! You entered the letter!  Please, try to enter a number");
-        }
+        }else
         if ((Integer.parseInt(text) > 25) || Integer.parseInt(text) <= 0) {
             JOptionPane.showMessageDialog(null, "Error! Entered number is out of range! Max length of password if 25 numbers.");
         }
